@@ -3,8 +3,11 @@ const router = express.Router();
 
 
 // @route POST api/user
-// @desc  Test route
+// @desc  Register user
 // @access Public
-router.post('', (req, rsp) => rsp.send('User Route') );
+router.post('', (req, rsp) => {
+    console.log(req.body);
+    rsp.send('User Route');
+});
 
 module.exports = router;
